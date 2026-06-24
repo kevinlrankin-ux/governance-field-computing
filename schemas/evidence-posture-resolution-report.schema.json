@@ -1,0 +1,225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence Posture Resolution Report",
+  "version": "0.1",
+  "type": "object",
+  "required": [
+    "report_id",
+    "version",
+    "status",
+    "source_evidence_set_id",
+    "source_posture_registry_id",
+    "target_ref",
+    "target_text",
+    "resolved_references",
+    "aggregate_actions",
+    "aggregate_runtime_responses",
+    "overall_resolution",
+    "overall_summary",
+    "anti_inflation_note",
+    "boundary_note"
+  ],
+  "properties": {
+    "report_id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "deprecated",
+        "superseded"
+      ]
+    },
+    "source_evidence_set_id": {
+      "type": "string"
+    },
+    "source_posture_registry_id": {
+      "type": "string"
+    },
+    "target_ref": {
+      "type": "string"
+    },
+    "target_text": {
+      "type": "string"
+    },
+    "resolved_references": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "evidence_id",
+          "evidence_status",
+          "handling_posture",
+          "recommended_next_action",
+          "friction_level",
+          "runtime_response",
+          "resolution_summary",
+          "boundary_note"
+        ],
+        "properties": {
+          "evidence_id": {
+            "type": "string"
+          },
+          "evidence_status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "cited",
+              "supported",
+              "contested",
+              "insufficient",
+              "missing",
+              "stale",
+              "superseded"
+            ]
+          },
+          "handling_posture": {
+            "type": "string",
+            "enum": [
+              "signal_incomplete_evidence",
+              "allow_citation_reference_block_support_claim",
+              "allow_scoped_support_claim",
+              "require_conflict_review",
+              "block_support_claim",
+              "surface_gap_and_block_support_claim",
+              "require_renewal_review",
+              "retire_current_authority_preserve_audit"
+            ]
+          },
+          "recommended_next_action": {
+            "type": "string",
+            "enum": [
+              "continue",
+              "cite_sources",
+              "review_support",
+              "resolve_conflict",
+              "supply_missing_evidence",
+              "renew_stale_evidence",
+              "retire_superseded_evidence",
+              "block_support_claim",
+              "unknown"
+            ]
+          },
+          "friction_level": {
+            "type": "string",
+            "enum": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "block"
+            ]
+          },
+          "runtime_response": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "enum": [
+                "allow_semantic_validation",
+                "allow_citation_presence",
+                "allow_scoped_support_claim",
+                "block_support_claim",
+                "block_universalization",
+                "surface_warning",
+                "surface_evidence_gap",
+                "surface_conflict",
+                "require_source_collection",
+                "require_support_review",
+                "require_claim_to_source_fit_review",
+                "require_conflict_review",
+                "require_renewal_review",
+                "request_updated_evidence",
+                "preserve_audit_trail",
+                "retire_current_authority",
+                "point_to_newer_controlling_evidence",
+                "continue_with_limitation"
+              ]
+            }
+          },
+          "resolution_summary": {
+            "type": "string"
+          },
+          "boundary_note": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "aggregate_actions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "continue",
+          "cite_sources",
+          "review_support",
+          "resolve_conflict",
+          "supply_missing_evidence",
+          "renew_stale_evidence",
+          "retire_superseded_evidence",
+          "block_support_claim",
+          "unknown"
+        ]
+      }
+    },
+    "aggregate_runtime_responses": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "allow_semantic_validation",
+          "allow_citation_presence",
+          "allow_scoped_support_claim",
+          "block_support_claim",
+          "block_universalization",
+          "surface_warning",
+          "surface_evidence_gap",
+          "surface_conflict",
+          "require_source_collection",
+          "require_support_review",
+          "require_claim_to_source_fit_review",
+          "require_conflict_review",
+          "require_renewal_review",
+          "request_updated_evidence",
+          "preserve_audit_trail",
+          "retire_current_authority",
+          "point_to_newer_controlling_evidence",
+          "continue_with_limitation"
+        ]
+      }
+    },
+    "overall_resolution": {
+      "type": "string",
+      "enum": [
+        "clean_continue",
+        "mixed_posture",
+        "review_required",
+        "blocked_support",
+        "conflict_review_required",
+        "renewal_required",
+        "retired_authority",
+        "unknown"
+      ]
+    },
+    "overall_summary": {
+      "type": "string"
+    },
+    "anti_inflation_note": {
+      "type": "string"
+    },
+    "boundary_note": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

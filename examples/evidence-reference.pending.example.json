@@ -1,0 +1,22 @@
+{
+  "evidence_id": "EV-PENDING-ORAL-HYGIENE-001",
+  "evidence_status": "pending",
+  "claim_ref": "pressure-layer-taxonomy.example.json::driver",
+  "claim_text": "Bacteria is the driver in the oral hygiene decomposition for the phrase 'Brush your teeth twice a day.'",
+  "evidence_summary": "Evidence has not yet been attached. This reference records that the claim currently remains evidence-pending while semantic validation has passed under the domain-bound oral hygiene rule set.",
+  "evidence_source": "not yet assigned",
+  "source_type": "not_assigned",
+  "evidence_scope": "oral hygiene domain; current source phrase; current pressure-layer semantic rule set",
+  "evidence_family": "not_assigned",
+  "evidence_role": "not_assigned",
+  "supports_claim": "not yet determined",
+  "limits_claim": "This evidence reference does not support universal claims about bacteria as a driver outside the current oral hygiene decomposition.",
+  "weakness_note": "No dental, medical, microbiological, or public-health citation has been attached yet.",
+  "conflict_note": "No conflict review has been completed.",
+  "freshness_note": "Freshness cannot be evaluated until a source is attached.",
+  "boundary_note": "Pending evidence does not invalidate the current semantic pass result, but it prevents GFC from claiming that the assignment is fully evidenced.",
+  "issued_at": "2026-06-23",
+  "expires_at": "",
+  "reviewed_at": "",
+  "reviewer_note": "Initial pending evidence reference for the first oral hygiene semantic validation example."
+}

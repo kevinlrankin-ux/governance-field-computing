@@ -1,0 +1,139 @@
+[
+  {
+    "evidence_status": "pending",
+    "definition": "Evidence has not yet been fully gathered, cited, reviewed, or attached.",
+    "use_when": [
+      "A claim is plausible but not yet sourced.",
+      "A rule exists but supporting evidence has not been attached.",
+      "Evidence review is planned but incomplete."
+    ],
+    "boundary_note": "Pending evidence does not mean the claim is false. It means evidence review is incomplete.",
+    "evidence_family": "not_assigned",
+    "evidence_role": "not_assigned",
+    "evidence_scope": "current claim or assignment",
+    "freshness_note": "Freshness not yet reviewed.",
+    "weakness_note": "Evidence support is not yet established.",
+    "conflict_note": "No conflict review completed."
+  },
+  {
+    "evidence_status": "cited",
+    "definition": "An evidence source has been identified and attached, but sufficiency has not yet been determined.",
+    "use_when": [
+      "A citation exists.",
+      "A source is linked.",
+      "The source has not yet been evaluated for sufficiency."
+    ],
+    "boundary_note": "Cited does not mean supported.",
+    "evidence_family": "not_assigned",
+    "evidence_role": "support",
+    "evidence_scope": "current claim or assignment",
+    "freshness_note": "Citation freshness must be checked separately.",
+    "weakness_note": "Citation relevance and sufficiency are not yet proven.",
+    "conflict_note": "Counterevidence has not yet been evaluated."
+  },
+  {
+    "evidence_status": "supported",
+    "definition": "Evidence has been reviewed and currently supports the claim within the declared domain, scope, and rule set.",
+    "use_when": [
+      "Source relevance is established.",
+      "Source quality is acceptable for the current purpose.",
+      "Evidence supports the specific claim being made.",
+      "Limitations are recorded."
+    ],
+    "boundary_note": "Supported does not mean universally true.",
+    "evidence_family": "not_assigned",
+    "evidence_role": "support",
+    "evidence_scope": "declared domain and claim scope",
+    "freshness_note": "Support remains subject to renewal if the source, domain, or system changes.",
+    "weakness_note": "Support is bounded by scope and source limitations.",
+    "conflict_note": "Known conflicts must be recorded separately."
+  },
+  {
+    "evidence_status": "contested",
+    "definition": "Evidence is challenged, contradicted, disputed, or in tension with other evidence.",
+    "use_when": [
+      "Sources disagree.",
+      "A reviewer disputes interpretation.",
+      "Counterevidence exists.",
+      "Claim support depends on unresolved assumptions."
+    ],
+    "boundary_note": "Contested does not automatically mean false.",
+    "evidence_family": "not_assigned",
+    "evidence_role": "conflict",
+    "evidence_scope": "current claim or assignment",
+    "freshness_note": "Freshness may be relevant if newer sources contest older ones.",
+    "weakness_note": "Interpretation cannot be treated as cleanly supported.",
+    "conflict_note": "Conflict must remain visible until resolved or bounded."
+  },
+  {
+    "evidence_status": "insufficient",
+    "definition": "Available evidence does not provide enough support for the claim.",
+    "use_when": [
+      "Evidence is too weak.",
+      "Evidence is too general.",
+      "Evidence does not apply to the declared domain.",
+      "Evidence supports a nearby claim but not this one.",
+      "Evidence lacks necessary specificity."
+    ],
+    "boundary_note": "Insufficient is stronger than pending because some evidence has been considered and found inadequate.",
+    "evidence_family": "not_assigned",
+    "evidence_role": "limitation",
+    "evidence_scope": "current claim or assignment",
+    "freshness_note": "Freshness may not matter if the evidence is already insufficient.",
+    "weakness_note": "Evidence does not support the claim enough for acceptance.",
+    "conflict_note": "Conflict may exist, but insufficiency can stand even without direct contradiction."
+  },
+  {
+    "evidence_status": "missing",
+    "definition": "Expected evidence is absent.",
+    "use_when": [
+      "No source is available.",
+      "A required citation is absent.",
+      "A key support artifact cannot be found.",
+      "The claim depends on evidence that has not been supplied."
+    ],
+    "boundary_note": "Missing evidence must not be hidden by confident language.",
+    "evidence_family": "negative_or_missing",
+    "evidence_role": "limitation",
+    "evidence_scope": "current claim or assignment",
+    "freshness_note": "Freshness cannot be evaluated because evidence is absent.",
+    "weakness_note": "The evidentiary basis is absent.",
+    "conflict_note": "No conflict can be resolved until expected evidence is supplied or declared unavailable."
+  },
+  {
+    "evidence_status": "stale",
+    "definition": "Evidence may once have been useful but may no longer be current enough for the claim.",
+    "use_when": [
+      "Evidence has expired.",
+      "Policy changed.",
+      "Scientific understanding changed.",
+      "System version changed.",
+      "Model, prompt, route, or retrieval basis changed.",
+      "Domain conditions changed."
+    ],
+    "boundary_note": "Stale evidence may require renewal before reuse.",
+    "evidence_family": "not_assigned",
+    "evidence_role": "renewal",
+    "evidence_scope": "current claim or assignment across time",
+    "freshness_note": "Freshness is the central issue for this status.",
+    "weakness_note": "Prior support may no longer apply.",
+    "conflict_note": "Newer evidence may contest or supersede the stale evidence."
+  },
+  {
+    "evidence_status": "superseded",
+    "definition": "Evidence has been replaced by later evidence, a newer source, a revised rule set, or a later decision record.",
+    "use_when": [
+      "A newer source supersedes an older source.",
+      "A rule set changes.",
+      "A decision record retires a prior claim.",
+      "A versioned system changes enough that prior evidence no longer controls."
+    ],
+    "boundary_note": "Superseded evidence should remain auditable, but it should not govern current validation.",
+    "evidence_family": "provenance",
+    "evidence_role": "audit",
+    "evidence_scope": "prior claim or prior rule set",
+    "freshness_note": "Later evidence or decisions now control.",
+    "weakness_note": "Prior evidence is no longer controlling for current validation.",
+    "conflict_note": "Supersession should identify the newer controlling evidence or decision when available."
+  }
+]

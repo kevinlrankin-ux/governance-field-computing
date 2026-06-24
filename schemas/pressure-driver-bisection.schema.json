@@ -1,0 +1,38 @@
+{
+  "driver": "bacteria",
+  "source_phrase": "Brush your teeth twice a day",
+
+  "interrogatives": {
+    "what": "Microorganisms capable of growth and reproduction",
+    "where": "Human mouth and dental surfaces",
+    "when": "Continuously present and reproducing",
+    "how": "Metabolize nutrients and form plaque biofilms",
+    "why": "Can contribute to decay and disease",
+    "why_not": "Not all bacteria are harmful"
+  },
+
+  "prerequisite_truths": [
+    "Biological organisms exist",
+    "Replication exists",
+    "Metabolism exists",
+    "Chemical reactions occur",
+    "Time passes",
+    "Humans possess teeth",
+    "Food residues accumulate"
+  ],
+
+  "failure_conditions": [
+    "Incorrect biological model",
+    "Driver misidentified",
+    "Evidence overturned"
+  ],
+
+  "evidence_status": "established",
+
+  "uncertainty_zones": [
+    "Optimal brushing frequency",
+    "Individual microbiome variation"
+  ],
+
+  "exploration_value": "medium"
+}

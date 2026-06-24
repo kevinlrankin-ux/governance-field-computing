@@ -1,0 +1,21 @@
+{
+  "governance_phrase": "Brush your teeth twice a day",
+
+  "driver": "bacteria",
+
+  "pressure": "harmful accumulation can increase risk of decay, disease, odor, or damage",
+
+  "prerequisite_truth": "bacteria can grow, reproduce, and accumulate under certain conditions",
+
+  "first_principle": "time permits accumulation and change",
+
+  "failure_visibility": {
+    "descriptors": [
+      "delayed",
+      "silent",
+      "visible",
+      "recoverable"
+    ],
+    "description": "Failure may begin silently through gradual accumulation before becoming visible as odor, pain, decay, or gum disease. Early failure may be recoverable through hygiene correction or dental care."
+  }
+}

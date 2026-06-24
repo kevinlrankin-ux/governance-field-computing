@@ -1,0 +1,257 @@
+{
+  "posture_registry_id": "EVIDENCE-HANDLING-POSTURE-REGISTRY-v0.1",
+  "version": "0.1",
+  "status": "draft",
+  "postures": [
+    {
+      "evidence_status": "pending",
+      "handling_posture": "signal_incomplete_evidence",
+      "runtime_response": [
+        "allow_semantic_validation",
+        "block_support_claim",
+        "surface_evidence_gap",
+        "require_source_collection",
+        "continue_with_limitation"
+      ],
+      "allowed_claim_behavior": [
+        "This claim passed semantic validation.",
+        "This claim has pending evidence.",
+        "Evidence has not yet been attached."
+      ],
+      "blocked_claim_behavior": [
+        "This claim is proven.",
+        "This claim is supported.",
+        "This claim is medically, legally, scientifically, or institutionally established."
+      ],
+      "recommended_next_action": "cite_sources",
+      "friction_level": "medium",
+      "review_required": true,
+      "human_review_required": false,
+      "audit_required": true,
+      "renewal_required": false,
+      "retirement_required": false,
+      "escalation_note": "Collect or attach evidence before making any support claim.",
+      "boundary_note": "Pending evidence does not equal failure, but it blocks support claims."
+    },
+    {
+      "evidence_status": "cited",
+      "handling_posture": "allow_citation_reference_block_support_claim",
+      "runtime_response": [
+        "allow_citation_presence",
+        "block_support_claim",
+        "require_support_review",
+        "require_claim_to_source_fit_review",
+        "continue_with_limitation"
+      ],
+      "allowed_claim_behavior": [
+        "A citation or source placeholder has been attached.",
+        "The claim has cited evidence.",
+        "The citation has not yet been reviewed for support."
+      ],
+      "blocked_claim_behavior": [
+        "The cited source supports the claim.",
+        "The claim is proven.",
+        "The claim is fully evidenced."
+      ],
+      "recommended_next_action": "review_support",
+      "friction_level": "medium",
+      "review_required": true,
+      "human_review_required": false,
+      "audit_required": true,
+      "renewal_required": false,
+      "retirement_required": false,
+      "escalation_note": "Review relevance, sufficiency, freshness, and claim-to-source fit before upgrading to supported.",
+      "boundary_note": "Cited evidence does not equal supported evidence."
+    },
+    {
+      "evidence_status": "supported",
+      "handling_posture": "allow_scoped_support_claim",
+      "runtime_response": [
+        "allow_scoped_support_claim",
+        "block_universalization",
+        "preserve_audit_trail",
+        "continue_with_limitation"
+      ],
+      "allowed_claim_behavior": [
+        "The claim is supported within the declared scope.",
+        "The evidence supports this bounded assignment.",
+        "Support applies under the current domain, phrase, rule set, and review scope."
+      ],
+      "blocked_claim_behavior": [
+        "The claim is universally true.",
+        "The claim is permanently established.",
+        "The claim is valid across all domains."
+      ],
+      "recommended_next_action": "continue",
+      "friction_level": "low",
+      "review_required": false,
+      "human_review_required": false,
+      "audit_required": true,
+      "renewal_required": false,
+      "retirement_required": false,
+      "escalation_note": "Continue within scope and preserve limitation notes.",
+      "boundary_note": "Supported evidence remains scope-bound and does not become universal truth."
+    },
+    {
+      "evidence_status": "contested",
+      "handling_posture": "require_conflict_review",
+      "runtime_response": [
+        "surface_conflict",
+        "block_support_claim",
+        "require_conflict_review",
+        "preserve_audit_trail",
+        "continue_with_limitation"
+      ],
+      "allowed_claim_behavior": [
+        "This claim has contested evidence.",
+        "Evidence conflict has been identified.",
+        "Further review is required before a clean support claim."
+      ],
+      "blocked_claim_behavior": [
+        "The claim is cleanly supported.",
+        "The conflict is resolved.",
+        "Contradictory evidence can be ignored."
+      ],
+      "recommended_next_action": "resolve_conflict",
+      "friction_level": "high",
+      "review_required": true,
+      "human_review_required": true,
+      "audit_required": true,
+      "renewal_required": false,
+      "retirement_required": false,
+      "escalation_note": "Route to conflict review before strengthening or generalizing the claim.",
+      "boundary_note": "Contested evidence does not equal rejection, but it blocks clean support claims."
+    },
+    {
+      "evidence_status": "insufficient",
+      "handling_posture": "block_support_claim",
+      "runtime_response": [
+        "block_support_claim",
+        "surface_warning",
+        "require_source_collection",
+        "preserve_audit_trail"
+      ],
+      "allowed_claim_behavior": [
+        "Evidence exists but is insufficient.",
+        "The current evidence does not adequately support the claim.",
+        "More or better-fit evidence is required."
+      ],
+      "blocked_claim_behavior": [
+        "The claim is supported.",
+        "The source is sufficient.",
+        "Evidence adequacy has been established."
+      ],
+      "recommended_next_action": "supply_missing_evidence",
+      "friction_level": "high",
+      "review_required": true,
+      "human_review_required": false,
+      "audit_required": true,
+      "renewal_required": false,
+      "retirement_required": false,
+      "escalation_note": "Add stronger evidence or revise the claim scope.",
+      "boundary_note": "Insufficient evidence is not useless, but it cannot support the claim as stated."
+    },
+    {
+      "evidence_status": "missing",
+      "handling_posture": "surface_gap_and_block_support_claim",
+      "runtime_response": [
+        "surface_evidence_gap",
+        "block_support_claim",
+        "require_source_collection",
+        "preserve_audit_trail"
+      ],
+      "allowed_claim_behavior": [
+        "Expected evidence is missing.",
+        "The claim has an evidence gap.",
+        "Evidence must be supplied before support can be claimed."
+      ],
+      "blocked_claim_behavior": [
+        "The claim is supported.",
+        "No evidence is needed.",
+        "Missing evidence proves the opposite claim."
+      ],
+      "recommended_next_action": "supply_missing_evidence",
+      "friction_level": "high",
+      "review_required": true,
+      "human_review_required": false,
+      "audit_required": true,
+      "renewal_required": false,
+      "retirement_required": false,
+      "escalation_note": "Supply missing evidence or keep the support claim blocked.",
+      "boundary_note": "Missing evidence blocks support but does not by itself disprove the claim."
+    },
+    {
+      "evidence_status": "stale",
+      "handling_posture": "require_renewal_review",
+      "runtime_response": [
+        "surface_warning",
+        "require_renewal_review",
+        "request_updated_evidence",
+        "block_support_claim",
+        "preserve_audit_trail"
+      ],
+      "allowed_claim_behavior": [
+        "Evidence may be stale.",
+        "Prior evidence exists but requires renewal review.",
+        "Freshness must be checked before current support is claimed."
+      ],
+      "blocked_claim_behavior": [
+        "The evidence is current.",
+        "The prior source still governs the claim.",
+        "No renewal is needed."
+      ],
+      "recommended_next_action": "renew_stale_evidence",
+      "friction_level": "high",
+      "review_required": true,
+      "human_review_required": false,
+      "audit_required": true,
+      "renewal_required": true,
+      "retirement_required": false,
+      "escalation_note": "Renew, replace, or downgrade stale evidence before making current support claims.",
+      "boundary_note": "Stale evidence is preserved for audit but cannot govern current support without renewal."
+    },
+    {
+      "evidence_status": "superseded",
+      "handling_posture": "retire_current_authority_preserve_audit",
+      "runtime_response": [
+        "retire_current_authority",
+        "preserve_audit_trail",
+        "point_to_newer_controlling_evidence",
+        "block_support_claim",
+        "continue_with_limitation"
+      ],
+      "allowed_claim_behavior": [
+        "This evidence has been superseded.",
+        "The prior record is preserved for audit.",
+        "A newer source, rule, or decision controls current authority when available."
+      ],
+      "blocked_claim_behavior": [
+        "The superseded evidence still controls.",
+        "The prior source can be used as current support.",
+        "Superseded evidence should be erased."
+      ],
+      "recommended_next_action": "retire_superseded_evidence",
+      "friction_level": "block",
+      "review_required": true,
+      "human_review_required": false,
+      "audit_required": true,
+      "renewal_required": false,
+      "retirement_required": true,
+      "escalation_note": "Retire from current authority and preserve provenance.",
+      "boundary_note": "Superseded evidence is not erased, but it no longer governs current claims."
+    }
+  ],
+  "anti_collapse_rules": [
+    "pending does not equal failed",
+    "cited does not equal supported",
+    "supported does not equal universal",
+    "contested does not equal rejected",
+    "insufficient does not equal useless",
+    "missing does not equal disproven",
+    "stale does not equal deleted",
+    "superseded does not equal erased"
+  ],
+  "methodology_ref": "docs/methodology/Evidence Handling Posture v0.1.md",
+  "vendor_scan_ref": "docs/vendor/Vendor Scan VENDOR-007 adaptive-security-protocol v0.1.md",
+  "boundary_note": "Evidence handling posture maps evidence status to bounded runtime behavior without collapsing uncertainty into binary pass or fail."
+}

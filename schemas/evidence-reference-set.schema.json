@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence Reference Set",
+  "version": "0.1",
+  "type": "object",
+  "required": [
+    "evidence_set_id",
+    "evidence_set_type",
+    "target_ref",
+    "target_text",
+    "evidence_status_summary",
+    "evidence_references",
+    "boundary_note"
+  ],
+  "properties": {
+    "evidence_set_id": {
+      "type": "string"
+    },
+    "evidence_set_type": {
+      "type": "string",
+      "enum": [
+        "claim",
+        "layer_assignment",
+        "rule_set",
+        "semantic_validation_run",
+        "review_report",
+        "decision_record",
+        "unknown"
+      ]
+    },
+    "target_ref": {
+      "type": "string"
+    },
+    "target_text": {
+      "type": "string"
+    },
+    "evidence_status_summary": {
+      "type": "object",
+      "required": [
+        "pending",
+        "cited",
+        "supported",
+        "contested",
+        "insufficient",
+        "missing",
+        "stale",
+        "superseded"
+      ],
+      "properties": {
+        "pending": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "cited": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "supported": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "contested": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "insufficient": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missing": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "stale": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "superseded": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence_references": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "evidence_id",
+          "evidence_status",
+          "claim_ref",
+          "claim_text",
+          "evidence_summary",
+          "evidence_source",
+          "source_type",
+          "evidence_scope",
+          "evidence_family",
+          "evidence_role",
+          "supports_claim",
+          "limits_claim",
+          "boundary_note"
+        ],
+        "properties": {
+          "evidence_id": {
+            "type": "string"
+          },
+          "evidence_status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "cited",
+              "supported",
+              "contested",
+              "insufficient",
+              "missing",
+              "stale",
+              "superseded"
+            ]
+          },
+          "claim_ref": {
+            "type": "string"
+          },
+          "claim_text": {
+            "type": "string"
+          },
+          "evidence_summary": {
+            "type": "string"
+          },
+          "evidence_source": {
+            "type": "string"
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "not_assigned",
+              "scientific_source",
+              "medical_source",
+              "legal_source",
+              "public_health_source",
+              "policy_source",
+              "institutional_source",
+              "technical_source",
+              "human_report",
+              "model_output",
+              "internal_artifact",
+              "unknown"
+            ]
+          },
+          "evidence_scope": {
+            "type": "string"
+          },
+          "evidence_family": {
+            "type": "string",
+            "enum": [
+              "observational",
+              "historical",
+              "comparative",
+              "model_derived",
+              "human_reported",
+              "policy_or_rule",
+              "provenance",
+              "negative_or_missing",
+              "structural",
+              "not_assigned"
+            ]
+          },
+          "evidence_role": {
+            "type": "string",
+            "enum": [
+              "support",
+              "limitation",
+              "conflict",
+              "renewal",
+              "boundary",
+              "stewardship",
+              "audit",
+              "not_assigned"
+            ]
+          },
+          "supports_claim": {
+            "type": "string"
+          },
+          "limits_claim": {
+            "type": "string"
+          },
+          "weakness_note": {
+            "type": "string"
+          },
+          "conflict_note": {
+            "type": "string"
+          },
+          "freshness_note": {
+            "type": "string"
+          },
+          "boundary_note": {
+            "type": "string"
+          },
+          "issued_at": {
+            "type": "string"
+          },
+          "expires_at": {
+            "type": "string"
+          },
+          "reviewed_at": {
+            "type": "string"
+          },
+          "reviewer_note": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "set_summary": {
+      "type": "string"
+    },
+    "set_limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommended_next_action": {
+      "type": "string",
+      "enum": [
+        "continue",
+        "cite_sources",
+        "review_support",
+        "resolve_conflict",
+        "supply_missing_evidence",
+        "renew_stale_evidence",
+        "retire_superseded_evidence",
+        "block_support_claim",
+        "unknown"
+      ]
+    },
+    "boundary_note": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

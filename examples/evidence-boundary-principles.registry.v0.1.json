@@ -1,0 +1,252 @@
+{
+  "registry_id": "EVIDENCE-BOUNDARY-PRINCIPLES-REGISTRY-v0.1",
+  "version": "0.1",
+  "status": "draft",
+  "principles": [
+    {
+      "principle_id": "EBP-001",
+      "principle_number": 1,
+      "name": "Semantic Validation Is Not Proof",
+      "statement": "A semantic validation result means that a claim, decomposition, layer assignment, or artifact conforms to the current declared semantic rules. It does not mean the claim is externally true or proven.",
+      "boundary_rule": "Semantic validation must not be inflated into proof.",
+      "anti_collapse_rule": "Do not collapse semantic fit into medical, legal, scientific, institutional, or external warrant.",
+      "applies_to": [
+        "semantic_validation",
+        "generated_artifacts",
+        "uncertainty_visibility"
+      ],
+      "methodology_ref": "docs/methodology/GFC Evidence Boundary Principles v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0021-Evidence-Boundary-Principles-Accepted.md"
+    },
+    {
+      "principle_id": "EBP-002",
+      "principle_number": 2,
+      "name": "Citation Presence Is Not Support",
+      "statement": "A citation or source reference may show that a source has been attached. It does not automatically show that the source supports the claim.",
+      "boundary_rule": "Cited evidence must remain distinct from supported evidence.",
+      "anti_collapse_rule": "Do not collapse citation presence into source support.",
+      "applies_to": [
+        "citation_presence",
+        "evidence_support",
+        "review_pathways"
+      ],
+      "methodology_ref": "docs/methodology/GFC Evidence Boundary Principles v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0021-Evidence-Boundary-Principles-Accepted.md"
+    },
+    {
+      "principle_id": "EBP-003",
+      "principle_number": 3,
+      "name": "Support Is Scope-Bound",
+      "statement": "Supported evidence may allow a scoped support claim only within declared boundaries such as domain, source phrase, rule set, target claim, review scope, and intended use.",
+      "boundary_rule": "Support must travel with scope.",
+      "anti_collapse_rule": "Do not collapse scoped support into universal truth.",
+      "applies_to": [
+        "evidence_support",
+        "scope_bound_warrant",
+        "domain_expansion"
+      ],
+      "methodology_ref": "docs/methodology/GFC Evidence Boundary Principles v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0021-Evidence-Boundary-Principles-Accepted.md"
+    },
+    {
+      "principle_id": "EBP-004",
+      "principle_number": 4,
+      "name": "Stronger Evidence Does Not Erase Weaker Evidence Records",
+      "statement": "An evidence bundle may contain stronger and weaker records at the same time. A supported reference does not delete pending, cited, stale, insufficient, contested, missing, or superseded records.",
+      "boundary_rule": "Evidence status plurality must be preserved.",
+      "anti_collapse_rule": "Do not collapse plural evidence states into a single clean pass.",
+      "applies_to": [
+        "evidence_status",
+        "evidence_support",
+        "generated_artifacts"
+      ],
+      "methodology_ref": "docs/methodology/GFC Evidence Boundary Principles v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0021-Evidence-Boundary-Principles-Accepted.md"
+    },
+    {
+      "principle_id": "EBP-005",
+      "principle_number": 5,
+      "name": "Missing Evidence Is Not Disproof",
+      "statement": "Missing evidence means evidence has not been supplied or attached. It may block support claims, but it does not automatically mean the claim is false.",
+      "boundary_rule": "Missing evidence blocks support inflation without pretending to settle truth.",
+      "anti_collapse_rule": "Do not collapse missing evidence into disproof.",
+      "applies_to": [
+        "evidence_status",
+        "review_pathways",
+        "uncertainty_visibility"
+      ],
+      "methodology_ref": "docs/methodology/GFC Evidence Boundary Principles v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0021-Evidence-Boundary-Principles-Accepted.md"
+    },
+    {
+      "principle_id": "EBP-006",
+      "principle_number": 6,
+      "name": "Stale Evidence Is Not Erased Evidence",
+      "statement": "Stale evidence may no longer be current enough to govern present support claims, but it remains auditable and may require renewal review.",
+      "boundary_rule": "Stale evidence loses current authority before it loses audit value.",
+      "anti_collapse_rule": "Do not collapse stale evidence into erased evidence or false evidence.",
+      "applies_to": [
+        "evidence_status",
+        "review_pathways",
+        "generated_artifacts"
+      ],
+      "methodology_ref": "docs/methodology/GFC Evidence Boundary Principles v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0021-Evidence-Boundary-Principles-Accepted.md"
+    },
+    {
+      "principle_id": "EBP-007",
+      "principle_number": 7,
+      "name": "Superseded Evidence Remains Auditable",
+      "statement": "Superseded evidence has been replaced by newer evidence, a newer source, a revised rule, or a changed decision context. It should not govern current support when newer controlling evidence exists, but it remains part of the audit trail.",
+      "boundary_rule": "Superseded evidence is retired from current authority, not erased from history.",
+      "anti_collapse_rule": "Do not collapse supersession into deletion.",
+      "applies_to": [
+        "evidence_status",
+        "review_pathways",
+        "generated_artifacts"
+      ],
+      "methodology_ref": "docs/methodology/GFC Evidence Boundary Principles v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0021-Evidence-Boundary-Principles-Accepted.md"
+    },
+    {
+      "principle_id": "EBP-008",
+      "principle_number": 8,
+      "name": "Runtime Posture Is Not Institutional Authority",
+      "statement": "A runtime posture may determine how GFC should respond to an evidence state. It governs GFC handling, not external legitimacy.",
+      "boundary_rule": "Runtime posture governs GFC handling, not external legitimacy.",
+      "anti_collapse_rule": "Do not collapse runtime handling into institutional authority.",
+      "applies_to": [
+        "runtime_posture",
+        "institutional_authority",
+        "generated_artifacts"
+      ],
+      "methodology_ref": "docs/methodology/GFC Evidence Boundary Principles v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0021-Evidence-Boundary-Principles-Accepted.md"
+    },
+    {
+      "principle_id": "EBP-009",
+      "principle_number": 9,
+      "name": "Domain Rules Must Be Declared Before Domain Claims Are Expanded",
+      "statement": "GFC must not silently generalize a rule from one domain into another. Domain expansion requires declared domain rules.",
+      "boundary_rule": "Domain expansion requires declared domain rules.",
+      "anti_collapse_rule": "Do not collapse one domain's valid rule into all-domain warrant.",
+      "applies_to": [
+        "domain_expansion",
+        "scope_bound_warrant",
+        "semantic_validation"
+      ],
+      "methodology_ref": "docs/methodology/GFC Evidence Boundary Principles v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0021-Evidence-Boundary-Principles-Accepted.md"
+    },
+    {
+      "principle_id": "EBP-010",
+      "principle_number": 10,
+      "name": "Anti-Inflation Language Must Travel With Generated Artifacts",
+      "statement": "Generated artifacts must preserve boundary language when there is risk of warrant inflation.",
+      "boundary_rule": "Generated artifacts must carry their own proof boundary.",
+      "anti_collapse_rule": "Do not emit generated artifacts that obscure what was validated and what was not proven.",
+      "applies_to": [
+        "generated_artifacts",
+        "semantic_validation",
+        "evidence_support"
+      ],
+      "methodology_ref": "docs/methodology/GFC Evidence Boundary Principles v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0021-Evidence-Boundary-Principles-Accepted.md"
+    },
+    {
+      "principle_id": "EBP-011",
+      "principle_number": 11,
+      "name": "Evidence Status Is Not Evidence Quality",
+      "statement": "Evidence status records how evidence is currently positioned in GFC. It does not automatically score quality.",
+      "boundary_rule": "Evidence status and evidence quality must remain distinct unless a quality-scoring layer is explicitly added.",
+      "anti_collapse_rule": "Do not collapse status labels into quality scores.",
+      "applies_to": [
+        "evidence_status",
+        "evidence_quality",
+        "review_pathways"
+      ],
+      "methodology_ref": "docs/methodology/GFC Evidence Boundary Principles v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0021-Evidence-Boundary-Principles-Accepted.md"
+    },
+    {
+      "principle_id": "EBP-012",
+      "principle_number": 12,
+      "name": "Evidence Handling Must Preserve Review Pathways",
+      "statement": "Evidence posture should preserve pathways for citation collection, support review, conflict review, renewal review, source replacement, domain review, retirement from authority, and audit preservation.",
+      "boundary_rule": "A mature evidence system routes uncertainty instead of collapsing it.",
+      "anti_collapse_rule": "Do not collapse reviewable uncertainty into binary acceptance or rejection.",
+      "applies_to": [
+        "review_pathways",
+        "runtime_posture",
+        "uncertainty_visibility"
+      ],
+      "methodology_ref": "docs/methodology/GFC Evidence Boundary Principles v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0021-Evidence-Boundary-Principles-Accepted.md"
+    },
+    {
+      "principle_id": "EBP-013",
+      "principle_number": 13,
+      "name": "Local Validation Is Not Live Enforcement",
+      "statement": "A local pipeline can prove that scripts run and artifacts validate. It does not prove that a live runtime will enforce those rules.",
+      "boundary_rule": "Local validation may prepare runtime behavior, but must not claim runtime enforcement prematurely.",
+      "anti_collapse_rule": "Do not collapse local test success into live runtime enforcement.",
+      "applies_to": [
+        "local_pipeline",
+        "runtime_posture",
+        "generated_artifacts"
+      ],
+      "methodology_ref": "docs/methodology/GFC Evidence Boundary Principles v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0021-Evidence-Boundary-Principles-Accepted.md"
+    },
+    {
+      "principle_id": "EBP-014",
+      "principle_number": 14,
+      "name": "Placeholder Sources Must Remain Marked",
+      "statement": "Placeholder sources may be used for structure, schema, and pipeline development. They must not be treated as real external support.",
+      "boundary_rule": "Placeholder evidence must remain visibly bounded.",
+      "anti_collapse_rule": "Do not collapse placeholder-supported examples into real-source support.",
+      "applies_to": [
+        "placeholder_sources",
+        "evidence_support",
+        "generated_artifacts"
+      ],
+      "methodology_ref": "docs/methodology/GFC Evidence Boundary Principles v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0021-Evidence-Boundary-Principles-Accepted.md"
+    },
+    {
+      "principle_id": "EBP-015",
+      "principle_number": 15,
+      "name": "Evidence Boundary Failures Must Be Visible",
+      "statement": "When GFC cannot determine support, freshness, authority, conflict, or domain fit, the uncertainty should be surfaced.",
+      "boundary_rule": "Uncertainty must remain visible where it affects warrant.",
+      "anti_collapse_rule": "Do not hide warrant-affecting uncertainty behind clean output.",
+      "applies_to": [
+        "uncertainty_visibility",
+        "generated_artifacts",
+        "review_pathways"
+      ],
+      "methodology_ref": "docs/methodology/GFC Evidence Boundary Principles v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0021-Evidence-Boundary-Principles-Accepted.md"
+    }
+  ],
+  "required_principle_names": [
+    "Semantic Validation Is Not Proof",
+    "Citation Presence Is Not Support",
+    "Support Is Scope-Bound",
+    "Stronger Evidence Does Not Erase Weaker Evidence Records",
+    "Missing Evidence Is Not Disproof",
+    "Stale Evidence Is Not Erased Evidence",
+    "Superseded Evidence Remains Auditable",
+    "Runtime Posture Is Not Institutional Authority",
+    "Domain Rules Must Be Declared Before Domain Claims Are Expanded",
+    "Anti-Inflation Language Must Travel With Generated Artifacts",
+    "Evidence Status Is Not Evidence Quality",
+    "Evidence Handling Must Preserve Review Pathways",
+    "Local Validation Is Not Live Enforcement",
+    "Placeholder Sources Must Remain Marked",
+    "Evidence Boundary Failures Must Be Visible"
+  ],
+  "anti_inflation_note": "This registry prevents evidence boundary concepts from being inflated into proof, institutional authority, universal truth, or external warrant.",
+  "boundary_note": "The registry preserves distinctions between semantic validation, citation presence, support, evidence status, evidence quality, runtime posture, and institutional authority.",
+  "vendor_boundary_note": "Vendor-derived concepts may inform candidate work, but vendor scan does not equal adoption."
+}

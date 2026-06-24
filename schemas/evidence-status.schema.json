@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence Status",
+  "version": "0.1",
+  "type": "object",
+  "required": [
+    "evidence_status",
+    "definition",
+    "use_when",
+    "boundary_note"
+  ],
+  "properties": {
+    "evidence_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "cited",
+        "supported",
+        "contested",
+        "insufficient",
+        "missing",
+        "stale",
+        "superseded"
+      ]
+    },
+    "definition": {
+      "type": "string"
+    },
+    "use_when": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "boundary_note": {
+      "type": "string"
+    },
+    "evidence_family": {
+      "type": "string",
+      "enum": [
+        "observational",
+        "historical",
+        "comparative",
+        "model_derived",
+        "human_reported",
+        "policy_or_rule",
+        "provenance",
+        "negative_or_missing",
+        "structural",
+        "not_assigned"
+      ]
+    },
+    "evidence_role": {
+      "type": "string",
+      "enum": [
+        "support",
+        "limitation",
+        "conflict",
+        "renewal",
+        "boundary",
+        "stewardship",
+        "audit",
+        "not_assigned"
+      ]
+    },
+    "evidence_scope": {
+      "type": "string"
+    },
+    "freshness_note": {
+      "type": "string"
+    },
+    "weakness_note": {
+      "type": "string"
+    },
+    "conflict_note": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

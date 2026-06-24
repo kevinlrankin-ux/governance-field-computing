@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Semantic Validation Run",
+  "version": "0.1",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "label",
+      "overall_result",
+      "results"
+    ],
+    "properties": {
+      "label": {
+        "type": "string"
+      },
+      "overall_result": {
+        "type": "string",
+        "enum": [
+          "pass",
+          "fail"
+        ]
+      },
+      "results": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "result_level",
+            "domain",
+            "source_phrase",
+            "rule_set_id",
+            "layer",
+            "assigned_value",
+            "reason",
+            "scope_note",
+            "warrant_note",
+            "evidence_status",
+            "recommended_next_action"
+          ],
+          "properties": {
+            "result_level": {
+              "type": "string",
+              "enum": [
+                "pass",
+                "fail",
+                "needs_evidence",
+                "needs_domain_review",
+                "unsupported",
+                "invalid_within_current_taxonomy",
+                "out_of_scope",
+                "ambiguous",
+                "superseded"
+              ]
+            },
+            "domain": {
+              "type": "string"
+            },
+            "source_phrase": {
+              "type": "string"
+            },
+            "rule_set_id": {
+              "type": "string"
+            },
+            "layer": {
+              "type": "string",
+              "enum": [
+                "governance_phrase",
+                "driver",
+                "pressure",
+                "prerequisite_truth",
+                "first_principle",
+                "failure_visibility"
+              ]
+            },
+            "assigned_value": {
+              "type": "string"
+            },
+            "reason": {
+              "type": "string"
+            },
+            "scope_note": {
+              "type": "string"
+            },
+            "warrant_note": {
+              "type": "string"
+            },
+            "evidence_status": {
+              "type": "string",
+              "enum": [
+                "not_checked",
+                "pending",
+                "cited",
+                "supported",
+                "contested",
+                "insufficient"
+              ]
+            },
+            "recommended_next_action": {
+              "type": "string",
+              "enum": [
+                "accept_for_current_rule_set",
+                "reject_for_current_rule_set",
+                "collect_evidence",
+                "perform_domain_review",
+                "revise_taxonomy",
+                "revise_rule_set",
+                "clarify_assignment",
+                "defer",
+                "retire_assignment"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+}

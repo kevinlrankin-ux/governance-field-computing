@@ -1,0 +1,40 @@
+{
+  "rule_set_id": "pressure-layer-semantic-rules.v0.1",
+  "version": "0.1",
+  "status": "draft",
+  "domain": "oral hygiene",
+  "source_phrase": "Brush your teeth twice a day",
+  "decomposition_purpose": "Test whether pressure-layer assignments belong in the declared oral hygiene decomposition.",
+  "principle": "Domain-Bounded Semantic Validity",
+  "valid_assignments": {
+    "driver": [
+      "bacteria"
+    ],
+    "pressure": [
+      "harmful accumulation can increase risk of decay, disease, odor, or damage"
+    ],
+    "prerequisite_truth": [
+      "bacteria can grow, reproduce, and accumulate under certain conditions"
+    ],
+    "first_principle": [
+      "time permits accumulation and change"
+    ]
+  },
+  "invalid_assignments": {
+    "driver": [
+      "time"
+    ],
+    "pressure": [
+      "bacteria"
+    ],
+    "prerequisite_truth": [
+      "tooth brushing"
+    ],
+    "first_principle": [
+      "dentists"
+    ]
+  },
+  "scope_note": "These rules apply only to the current oral hygiene test case and source phrase. They must not be generalized without review.",
+  "warrant_note": "Rules are based on the current validated example and adversarial fixture. Evidence citations remain pending.",
+  "anti_inflation_note": "A valid assignment here does not imply universal validity across other domains or phrases."
+}

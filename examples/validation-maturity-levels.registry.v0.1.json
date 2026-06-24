@@ -1,0 +1,369 @@
+{
+  "registry_id": "VALIDATION-MATURITY-LEVELS-REGISTRY-v0.1",
+  "version": "0.1",
+  "status": "draft",
+  "current_gfc_maturity_level": 6,
+  "levels": [
+    {
+      "level_number": 1,
+      "name": "Prose-only methodology",
+      "definition": "A concept is described in human-readable form only.",
+      "typical_artifacts": [
+        "methodology document",
+        "concept note",
+        "decision memo",
+        "boundary statement"
+      ],
+      "what_this_proves": [
+        "The concept has been articulated."
+      ],
+      "what_this_does_not_prove": [
+        "machine readability",
+        "schema conformance",
+        "executable validation",
+        "local repeatability",
+        "CI enforcement",
+        "runtime enforcement",
+        "external proof"
+      ],
+      "boundary_rule": "Prose-only methodology is not implementation.",
+      "allowed_claims": [
+        "The concept has been described.",
+        "The boundary has been stated."
+      ],
+      "disallowed_claims": [
+        "The concept has been implemented.",
+        "The concept is machine-readable.",
+        "The concept is locally validated."
+      ],
+      "current_status": "achieved",
+      "methodology_ref": "docs/methodology/GFC Validation Maturity Ladder v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0026-Validation-Maturity-Ladder-Accepted.md"
+    },
+    {
+      "level_number": 2,
+      "name": "Structured artifact",
+      "definition": "A concept is represented as a structured artifact, such as JSON, Markdown sections, registry-like prose, or tabular form.",
+      "typical_artifacts": [
+        "structured example",
+        "registry draft",
+        "artifact template",
+        "structured report"
+      ],
+      "what_this_proves": [
+        "The concept can be represented in a consistent structure."
+      ],
+      "what_this_does_not_prove": [
+        "formal schema validation",
+        "executable validation",
+        "repeatable pipeline behavior",
+        "runtime consumption"
+      ],
+      "boundary_rule": "Structured artifact is not schema-defined artifact.",
+      "allowed_claims": [
+        "The concept has a structured representation."
+      ],
+      "disallowed_claims": [
+        "The artifact conforms to a schema.",
+        "The artifact has been locally validated.",
+        "The artifact is runtime-enforced."
+      ],
+      "current_status": "achieved",
+      "methodology_ref": "docs/methodology/GFC Validation Maturity Ladder v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0026-Validation-Maturity-Ladder-Accepted.md"
+    },
+    {
+      "level_number": 3,
+      "name": "Schema-defined artifact",
+      "definition": "A structured artifact has an explicit schema that defines required fields, allowed values, and expected shape.",
+      "typical_artifacts": [
+        "JSON schema",
+        "typed contract",
+        "schema-bound example",
+        "schema-bound registry"
+      ],
+      "what_this_proves": [
+        "The artifact has a declared machine-readable shape."
+      ],
+      "what_this_does_not_prove": [
+        "artifact correctness",
+        "actual validation execution",
+        "pipeline integration",
+        "runtime enforcement"
+      ],
+      "boundary_rule": "Schema definition is not validation execution.",
+      "allowed_claims": [
+        "The artifact has a declared schema.",
+        "The artifact has a machine-readable shape."
+      ],
+      "disallowed_claims": [
+        "The artifact has passed validation.",
+        "The artifact is pipeline-backed.",
+        "The artifact is runtime-enforced."
+      ],
+      "current_status": "achieved",
+      "methodology_ref": "docs/methodology/GFC Validation Maturity Ladder v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0026-Validation-Maturity-Ladder-Accepted.md"
+    },
+    {
+      "level_number": 4,
+      "name": "Local validator",
+      "definition": "A local script validates a structured artifact against declared expectations.",
+      "typical_artifacts": [
+        "PowerShell validator",
+        "test script",
+        "conformance checker",
+        "artifact-specific validation command"
+      ],
+      "what_this_proves": [
+        "The artifact can be checked locally."
+      ],
+      "what_this_does_not_prove": [
+        "full pipeline behavior",
+        "CI enforcement",
+        "runtime enforcement",
+        "external truth",
+        "institutional authority"
+      ],
+      "boundary_rule": "A local validator is not a local pipeline.",
+      "allowed_claims": [
+        "A local validator exists.",
+        "The artifact can be checked locally."
+      ],
+      "disallowed_claims": [
+        "The artifact is CI-enforced.",
+        "The artifact is runtime-enforced.",
+        "The artifact proves external truth."
+      ],
+      "current_status": "achieved",
+      "methodology_ref": "docs/methodology/GFC Validation Maturity Ladder v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0026-Validation-Maturity-Ladder-Accepted.md"
+    },
+    {
+      "level_number": 5,
+      "name": "Local pipeline",
+      "definition": "Multiple validators or local steps are chained into a repeatable local sequence.",
+      "typical_artifacts": [
+        "pipeline runner",
+        "ordered validation chain",
+        "multi-step local command",
+        "local generated artifact flow"
+      ],
+      "what_this_proves": [
+        "A set of related artifacts can be validated together locally."
+      ],
+      "what_this_does_not_prove": [
+        "combined architecture validation",
+        "CI enforcement",
+        "runtime enforcement",
+        "production behavior"
+      ],
+      "boundary_rule": "A local pipeline is not a combined local suite.",
+      "allowed_claims": [
+        "A local pipeline exists.",
+        "Related artifacts can be validated together locally."
+      ],
+      "disallowed_claims": [
+        "The architecture is validated as a whole.",
+        "The pipeline is CI-enforced.",
+        "The pipeline is runtime-enforced."
+      ],
+      "current_status": "achieved",
+      "methodology_ref": "docs/methodology/GFC Validation Maturity Ladder v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0026-Validation-Maturity-Ladder-Accepted.md"
+    },
+    {
+      "level_number": 6,
+      "name": "Combined local suite",
+      "definition": "Multiple accepted local pipelines are run through one repeatable local command.",
+      "typical_artifacts": [
+        "combined suite runner",
+        "local validation suite",
+        "cross-pipeline validation command",
+        "local architecture validation command"
+      ],
+      "what_this_proves": [
+        "The current local architecture can be validated as a whole."
+      ],
+      "what_this_does_not_prove": [
+        "CI enforcement",
+        "runtime enforcement",
+        "release packaging",
+        "agent behavior",
+        "source authority",
+        "domain authority"
+      ],
+      "boundary_rule": "A combined local suite is not CI enforcement.",
+      "allowed_claims": [
+        "GFC has a combined local validation suite.",
+        "GFC can locally validate the current evidence-handling architecture."
+      ],
+      "disallowed_claims": [
+        "GFC has CI enforcement.",
+        "GFC has runtime enforcement.",
+        "GFC has domain authority integration."
+      ],
+      "current_status": "current",
+      "methodology_ref": "docs/methodology/GFC Validation Maturity Ladder v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0026-Validation-Maturity-Ladder-Accepted.md"
+    },
+    {
+      "level_number": 7,
+      "name": "CI-enforced suite",
+      "definition": "The combined validation suite runs automatically in continuous integration.",
+      "typical_artifacts": [
+        "GitHub Actions workflow",
+        "CI status check",
+        "pull request gate",
+        "automated failure blocking",
+        "build log artifact"
+      ],
+      "what_this_proves": [
+        "The validation suite can be executed automatically during repository change workflows."
+      ],
+      "what_this_does_not_prove": [
+        "runtime behavior",
+        "user-facing enforcement",
+        "agent behavior",
+        "external truth",
+        "institutional authority"
+      ],
+      "boundary_rule": "CI enforcement is not runtime enforcement.",
+      "allowed_claims": [
+        "The validation suite is CI-enforced."
+      ],
+      "disallowed_claims": [
+        "The suite is runtime-enforced.",
+        "The suite establishes institutional authority.",
+        "The suite proves external truth."
+      ],
+      "current_status": "not_yet_achieved",
+      "methodology_ref": "docs/methodology/GFC Validation Maturity Ladder v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0026-Validation-Maturity-Ladder-Accepted.md"
+    },
+    {
+      "level_number": 8,
+      "name": "Runtime-consumed registry",
+      "definition": "A runtime system reads a registry, schema, or validation artifact during operation.",
+      "typical_artifacts": [
+        "runtime registry loader",
+        "runtime lookup module",
+        "runtime artifact resolver",
+        "registry-to-runtime adapter"
+      ],
+      "what_this_proves": [
+        "Runtime code can consume accepted validation artifacts."
+      ],
+      "what_this_does_not_prove": [
+        "enforcement",
+        "blocking behavior",
+        "warning behavior",
+        "agent compliance",
+        "domain authority"
+      ],
+      "boundary_rule": "Runtime consumption is not runtime enforcement.",
+      "allowed_claims": [
+        "Runtime code can consume the registry."
+      ],
+      "disallowed_claims": [
+        "Runtime code enforces the registry.",
+        "Runtime code blocks unsupported claims.",
+        "Runtime code establishes domain authority."
+      ],
+      "current_status": "not_yet_achieved",
+      "methodology_ref": "docs/methodology/GFC Validation Maturity Ladder v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0026-Validation-Maturity-Ladder-Accepted.md"
+    },
+    {
+      "level_number": 9,
+      "name": "Runtime boundary enforcement",
+      "definition": "A runtime system uses accepted registries and boundary rules to alter behavior.",
+      "typical_artifacts": [
+        "warning generation",
+        "support-claim blocking",
+        "citation requirement",
+        "review routing",
+        "conflict escalation",
+        "stale evidence renewal",
+        "superseded evidence retirement",
+        "unsupported claim suppression",
+        "anti-inflation language injection"
+      ],
+      "what_this_proves": [
+        "Runtime behavior is affected by accepted GFC boundary artifacts."
+      ],
+      "what_this_does_not_prove": [
+        "domain-specific authority",
+        "external proof",
+        "medical adequacy",
+        "legal adequacy",
+        "scientific consensus",
+        "institutional legitimacy"
+      ],
+      "boundary_rule": "Runtime boundary enforcement is not domain-specific authority integration.",
+      "allowed_claims": [
+        "Runtime behavior enforces declared GFC boundary rules."
+      ],
+      "disallowed_claims": [
+        "Runtime enforcement proves domain truth.",
+        "Runtime enforcement establishes medical, legal, scientific, or institutional adequacy.",
+        "Runtime enforcement creates universal authority."
+      ],
+      "current_status": "not_yet_achieved",
+      "methodology_ref": "docs/methodology/GFC Validation Maturity Ladder v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0026-Validation-Maturity-Ladder-Accepted.md"
+    },
+    {
+      "level_number": 10,
+      "name": "Domain-specific authority integration",
+      "definition": "GFC integrates domain-specific authority standards, thresholds, review criteria, or external evidence requirements for a declared domain.",
+      "typical_artifacts": [
+        "domain evidence threshold",
+        "source authority model",
+        "freshness model",
+        "review model",
+        "conflict model",
+        "domain-specific warrant rules",
+        "institutional review layer"
+      ],
+      "what_this_proves": [
+        "GFC has declared domain-specific criteria for authority handling."
+      ],
+      "what_this_does_not_prove": [
+        "universal truth",
+        "universal authority",
+        "all-domain warrant",
+        "final institutional legitimacy without actual institutional acceptance"
+      ],
+      "boundary_rule": "Domain-specific authority integration is scoped, not universal.",
+      "allowed_claims": [
+        "GFC has scoped domain-specific authority criteria for a declared domain."
+      ],
+      "disallowed_claims": [
+        "GFC proves universal truth.",
+        "GFC has universal authority.",
+        "GFC has all-domain warrant.",
+        "GFC has final institutional legitimacy without actual institutional acceptance."
+      ],
+      "current_status": "not_yet_achieved",
+      "methodology_ref": "docs/methodology/GFC Validation Maturity Ladder v0.1.md",
+      "decision_ref": "docs/decisions/GFC-0026-Validation-Maturity-Ladder-Accepted.md"
+    }
+  ],
+  "required_level_names": [
+    "Prose-only methodology",
+    "Structured artifact",
+    "Schema-defined artifact",
+    "Local validator",
+    "Local pipeline",
+    "Combined local suite",
+    "CI-enforced suite",
+    "Runtime-consumed registry",
+    "Runtime boundary enforcement",
+    "Domain-specific authority integration"
+  ],
+  "anti_inflation_note": "Validation maturity must not be inflated into CI enforcement, runtime enforcement, external proof, institutional authority, domain-specific warrant, or universal truth.",
+  "boundary_note": "A lower maturity level must not claim the powers of a higher maturity level.",
+  "current_capability_note": "Current GFC maturity is Level 6: Combined local suite.",
+  "not_yet_achieved_note": "GFC has not yet achieved CI enforcement, runtime-consumed registry, runtime boundary enforcement, or domain-specific authority integration."
+}

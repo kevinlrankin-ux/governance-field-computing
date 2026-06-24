@@ -1,0 +1,22 @@
+{
+  "evidence_id": "EV-SUPPORTED-ORAL-HYGIENE-001",
+  "evidence_status": "supported",
+  "claim_ref": "pressure-layer-taxonomy.example.json::driver",
+  "claim_text": "Bacteria is the driver in the oral hygiene decomposition for the phrase 'Brush your teeth twice a day.'",
+  "evidence_summary": "For this example, the evidence reference is treated as supported within the current oral hygiene domain and current pressure-layer semantic rule set. This support is scope-bound and does not imply universal truth, complete dental science, or cross-domain validity.",
+  "evidence_source": "SOURCE_PLACEHOLDER_ORAL_HYGIENE_BACTERIA_DRIVER_REVIEWED",
+  "source_type": "public_health_source",
+  "evidence_scope": "oral hygiene domain only; current source phrase only; current pressure-layer semantic rule set only",
+  "evidence_family": "not_assigned",
+  "evidence_role": "support",
+  "supports_claim": "The reviewed source is treated as supporting the bounded claim that bacteria can function as the driver in this oral hygiene decomposition.",
+  "limits_claim": "Support applies only to the current oral hygiene decomposition and does not establish bacteria as the driver in every health, biological, institutional, or governance context.",
+  "weakness_note": "This is still a placeholder-supported example. Future versions must replace the placeholder with a real source and explicit citation review.",
+  "conflict_note": "No conflicting evidence is recorded in this example. Future conflict review remains required.",
+  "freshness_note": "Freshness is treated as not yet independently reviewed. Future evidence validation must check source date, currency, and continued applicability.",
+  "boundary_note": "Supported evidence is scope-bound. It does not mean universal truth, final scientific completeness, legal legitimacy, or cross-domain validity.",
+  "issued_at": "2026-06-23",
+  "expires_at": "",
+  "reviewed_at": "2026-06-23",
+  "reviewer_note": "Initial supported evidence reference example. This intentionally preserves the boundary that supported evidence remains scope-bound."
+}

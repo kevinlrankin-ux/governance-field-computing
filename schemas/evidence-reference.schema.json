@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence Reference",
+  "version": "0.1",
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "evidence_status",
+    "claim_ref",
+    "claim_text",
+    "evidence_summary",
+    "evidence_source",
+    "source_type",
+    "evidence_scope",
+    "evidence_family",
+    "evidence_role",
+    "supports_claim",
+    "limits_claim",
+    "boundary_note"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string"
+    },
+    "evidence_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "cited",
+        "supported",
+        "contested",
+        "insufficient",
+        "missing",
+        "stale",
+        "superseded"
+      ]
+    },
+    "claim_ref": {
+      "type": "string"
+    },
+    "claim_text": {
+      "type": "string"
+    },
+    "evidence_summary": {
+      "type": "string"
+    },
+    "evidence_source": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "not_assigned",
+        "scientific_source",
+        "medical_source",
+        "legal_source",
+        "public_health_source",
+        "policy_source",
+        "institutional_source",
+        "technical_source",
+        "human_report",
+        "model_output",
+        "internal_artifact",
+        "unknown"
+      ]
+    },
+    "evidence_scope": {
+      "type": "string"
+    },
+    "evidence_family": {
+      "type": "string",
+      "enum": [
+        "observational",
+        "historical",
+        "comparative",
+        "model_derived",
+        "human_reported",
+        "policy_or_rule",
+        "provenance",
+        "negative_or_missing",
+        "structural",
+        "not_assigned"
+      ]
+    },
+    "evidence_role": {
+      "type": "string",
+      "enum": [
+        "support",
+        "limitation",
+        "conflict",
+        "renewal",
+        "boundary",
+        "stewardship",
+        "audit",
+        "not_assigned"
+      ]
+    },
+    "supports_claim": {
+      "type": "string"
+    },
+    "limits_claim": {
+      "type": "string"
+    },
+    "weakness_note": {
+      "type": "string"
+    },
+    "conflict_note": {
+      "type": "string"
+    },
+    "freshness_note": {
+      "type": "string"
+    },
+    "boundary_note": {
+      "type": "string"
+    },
+    "issued_at": {
+      "type": "string"
+    },
+    "expires_at": {
+      "type": "string"
+    },
+    "reviewed_at": {
+      "type": "string"
+    },
+    "reviewer_note": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

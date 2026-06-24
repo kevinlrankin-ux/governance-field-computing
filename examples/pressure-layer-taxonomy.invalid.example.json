@@ -1,0 +1,15 @@
+{
+  "governance_phrase": "Brush your teeth twice a day",
+
+  "driver": "time",
+
+  "pressure": "bacteria",
+
+  "prerequisite_truth": "tooth brushing",
+
+  "first_principle": "dentists",
+
+  "expected_validation_result": "fail",
+
+  "failure_reason": "This example intentionally misclassifies the pressure-layer taxonomy. Time is treated as a driver, bacteria is treated as a pressure, tooth brushing is treated as a prerequisite truth, and dentists are treated as a first principle. The current validator may not reject this yet because it validates structure rather than semantic layer correctness."
+}

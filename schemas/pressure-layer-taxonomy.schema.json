@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pressure Layer Taxonomy",
+  "version": "0.1",
+
+  "type": "object",
+
+  "required": [
+    "governance_phrase",
+    "driver",
+    "pressure",
+    "prerequisite_truth",
+    "first_principle"
+  ],
+
+  "properties": {
+
+    "governance_phrase": {
+      "type": "string"
+    },
+
+    "driver": {
+      "type": "string"
+    },
+
+    "pressure": {
+      "type": "string"
+    },
+
+    "prerequisite_truth": {
+      "type": "string"
+    },
+
+    "first_principle": {
+      "type": "string"
+    }
+
+  }
+}

@@ -1,0 +1,31 @@
+name: GFC Local Validation
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  gfc-local-validation:
+    name: Run GFC all local pipelines
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show PowerShell version
+        shell: pwsh
+        run: |
+          $PSVersionTable
+
+      - name: Run GFC all local pipelines
+        shell: pwsh
+        run: |
+          .\tests\run_gfc_all_local_pipelines.ps1

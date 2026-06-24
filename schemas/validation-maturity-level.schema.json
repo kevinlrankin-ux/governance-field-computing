@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Validation Maturity Levels Registry",
+  "type": "object",
+  "required": [
+    "registry_id",
+    "version",
+    "status",
+    "current_gfc_maturity_level",
+    "levels",
+    "required_level_names",
+    "anti_inflation_note",
+    "boundary_note",
+    "current_capability_note",
+    "not_yet_achieved_note"
+  ],
+  "properties": {
+    "registry_id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "accepted",
+        "deprecated",
+        "superseded"
+      ]
+    },
+    "current_gfc_maturity_level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "levels": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "level_number",
+          "name",
+          "definition",
+          "typical_artifacts",
+          "what_this_proves",
+          "what_this_does_not_prove",
+          "boundary_rule",
+          "allowed_claims",
+          "disallowed_claims",
+          "current_status",
+          "methodology_ref",
+          "decision_ref"
+        ],
+        "properties": {
+          "level_number": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10
+          },
+          "name": {
+            "type": "string"
+          },
+          "definition": {
+            "type": "string"
+          },
+          "typical_artifacts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "what_this_proves": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "what_this_does_not_prove": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "boundary_rule": {
+            "type": "string"
+          },
+          "allowed_claims": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "disallowed_claims": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "current_status": {
+            "type": "string",
+            "enum": [
+              "achieved",
+              "current",
+              "future",
+              "not_yet_achieved",
+              "superseded"
+            ]
+          },
+          "methodology_ref": {
+            "type": "string"
+          },
+          "decision_ref": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "required_level_names": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "type": "string"
+      }
+    },
+    "anti_inflation_note": {
+      "type": "string"
+    },
+    "boundary_note": {
+      "type": "string"
+    },
+    "current_capability_note": {
+      "type": "string"
+    },
+    "not_yet_achieved_note": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

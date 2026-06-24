@@ -1,0 +1,118 @@
+﻿[
+    {
+        "label":  "valid oral hygiene example",
+        "overall_result":  "pass",
+        "results":  [
+                        {
+                            "result_level":  "pass",
+                            "domain":  "oral hygiene",
+                            "source_phrase":  "Brush your teeth twice a day",
+                            "rule_set_id":  "pressure-layer-semantic-rules.v0.1",
+                            "layer":  "driver",
+                            "assigned_value":  "bacteria",
+                            "reason":  "Assignment matches the current domain-bound valid assignment list.",
+                            "scope_note":  "These rules apply only to the current oral hygiene test case and source phrase. They must not be generalized without review.",
+                            "warrant_note":  "Rules are based on the current validated example and adversarial fixture. Evidence citations remain pending.",
+                            "evidence_status":  "pending",
+                            "recommended_next_action":  "accept_for_current_rule_set"
+                        },
+                        {
+                            "result_level":  "pass",
+                            "domain":  "oral hygiene",
+                            "source_phrase":  "Brush your teeth twice a day",
+                            "rule_set_id":  "pressure-layer-semantic-rules.v0.1",
+                            "layer":  "pressure",
+                            "assigned_value":  "harmful accumulation can increase risk of decay, disease, odor, or damage",
+                            "reason":  "Assignment matches the current domain-bound valid assignment list.",
+                            "scope_note":  "These rules apply only to the current oral hygiene test case and source phrase. They must not be generalized without review.",
+                            "warrant_note":  "Rules are based on the current validated example and adversarial fixture. Evidence citations remain pending.",
+                            "evidence_status":  "pending",
+                            "recommended_next_action":  "accept_for_current_rule_set"
+                        },
+                        {
+                            "result_level":  "pass",
+                            "domain":  "oral hygiene",
+                            "source_phrase":  "Brush your teeth twice a day",
+                            "rule_set_id":  "pressure-layer-semantic-rules.v0.1",
+                            "layer":  "prerequisite_truth",
+                            "assigned_value":  "bacteria can grow, reproduce, and accumulate under certain conditions",
+                            "reason":  "Assignment matches the current domain-bound valid assignment list.",
+                            "scope_note":  "These rules apply only to the current oral hygiene test case and source phrase. They must not be generalized without review.",
+                            "warrant_note":  "Rules are based on the current validated example and adversarial fixture. Evidence citations remain pending.",
+                            "evidence_status":  "pending",
+                            "recommended_next_action":  "accept_for_current_rule_set"
+                        },
+                        {
+                            "result_level":  "pass",
+                            "domain":  "oral hygiene",
+                            "source_phrase":  "Brush your teeth twice a day",
+                            "rule_set_id":  "pressure-layer-semantic-rules.v0.1",
+                            "layer":  "first_principle",
+                            "assigned_value":  "time permits accumulation and change",
+                            "reason":  "Assignment matches the current domain-bound valid assignment list.",
+                            "scope_note":  "These rules apply only to the current oral hygiene test case and source phrase. They must not be generalized without review.",
+                            "warrant_note":  "Rules are based on the current validated example and adversarial fixture. Evidence citations remain pending.",
+                            "evidence_status":  "pending",
+                            "recommended_next_action":  "accept_for_current_rule_set"
+                        }
+                    ]
+    },
+    {
+        "label":  "adversarial oral hygiene example",
+        "overall_result":  "fail",
+        "results":  [
+                        {
+                            "result_level":  "invalid_within_current_taxonomy",
+                            "domain":  "oral hygiene",
+                            "source_phrase":  "Brush your teeth twice a day",
+                            "rule_set_id":  "pressure-layer-semantic-rules.v0.1",
+                            "layer":  "driver",
+                            "assigned_value":  "time",
+                            "reason":  "Assignment appears in the current invalid assignment list for this domain-bound rule set.",
+                            "scope_note":  "These rules apply only to the current oral hygiene test case and source phrase. They must not be generalized without review.",
+                            "warrant_note":  "Rules are based on the current validated example and adversarial fixture. Evidence citations remain pending.",
+                            "evidence_status":  "pending",
+                            "recommended_next_action":  "reject_for_current_rule_set"
+                        },
+                        {
+                            "result_level":  "invalid_within_current_taxonomy",
+                            "domain":  "oral hygiene",
+                            "source_phrase":  "Brush your teeth twice a day",
+                            "rule_set_id":  "pressure-layer-semantic-rules.v0.1",
+                            "layer":  "pressure",
+                            "assigned_value":  "bacteria",
+                            "reason":  "Assignment appears in the current invalid assignment list for this domain-bound rule set.",
+                            "scope_note":  "These rules apply only to the current oral hygiene test case and source phrase. They must not be generalized without review.",
+                            "warrant_note":  "Rules are based on the current validated example and adversarial fixture. Evidence citations remain pending.",
+                            "evidence_status":  "pending",
+                            "recommended_next_action":  "reject_for_current_rule_set"
+                        },
+                        {
+                            "result_level":  "invalid_within_current_taxonomy",
+                            "domain":  "oral hygiene",
+                            "source_phrase":  "Brush your teeth twice a day",
+                            "rule_set_id":  "pressure-layer-semantic-rules.v0.1",
+                            "layer":  "prerequisite_truth",
+                            "assigned_value":  "tooth brushing",
+                            "reason":  "Assignment appears in the current invalid assignment list for this domain-bound rule set.",
+                            "scope_note":  "These rules apply only to the current oral hygiene test case and source phrase. They must not be generalized without review.",
+                            "warrant_note":  "Rules are based on the current validated example and adversarial fixture. Evidence citations remain pending.",
+                            "evidence_status":  "pending",
+                            "recommended_next_action":  "reject_for_current_rule_set"
+                        },
+                        {
+                            "result_level":  "invalid_within_current_taxonomy",
+                            "domain":  "oral hygiene",
+                            "source_phrase":  "Brush your teeth twice a day",
+                            "rule_set_id":  "pressure-layer-semantic-rules.v0.1",
+                            "layer":  "first_principle",
+                            "assigned_value":  "dentists",
+                            "reason":  "Assignment appears in the current invalid assignment list for this domain-bound rule set.",
+                            "scope_note":  "These rules apply only to the current oral hygiene test case and source phrase. They must not be generalized without review.",
+                            "warrant_note":  "Rules are based on the current validated example and adversarial fixture. Evidence citations remain pending.",
+                            "evidence_status":  "pending",
+                            "recommended_next_action":  "reject_for_current_rule_set"
+                        }
+                    ]
+    }
+]

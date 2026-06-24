@@ -1,0 +1,80 @@
+{
+  "report_id": "EVIDENCE-POSTURE-RESOLUTION-REPORT-v0.1",
+  "version": "0.1",
+  "status": "draft",
+  "source_evidence_set_id": "EVSET-ORAL-HYGIENE-001",
+  "source_posture_registry_id": "EVIDENCE-HANDLING-POSTURE-REGISTRY-v0.1",
+  "target_ref": "pressure-layer-taxonomy.example.json::driver",
+  "target_text": "Bacteria is the driver in the oral hygiene decomposition for the phrase 'Brush your teeth twice a day.'",
+  "resolved_references": [
+    {
+      "evidence_id": "EV-PENDING-ORAL-HYGIENE-001",
+      "evidence_status": "pending",
+      "handling_posture": "signal_incomplete_evidence",
+      "recommended_next_action": "cite_sources",
+      "friction_level": "medium",
+      "runtime_response": [
+        "allow_semantic_validation",
+        "block_support_claim",
+        "surface_evidence_gap",
+        "require_source_collection",
+        "continue_with_limitation"
+      ],
+      "resolution_summary": "Pending evidence may allow semantic validation to stand, but blocks support claims and requires source collection.",
+      "boundary_note": "Pending evidence does not equal failure, but it blocks support claims."
+    },
+    {
+      "evidence_id": "EV-CITED-ORAL-HYGIENE-001",
+      "evidence_status": "cited",
+      "handling_posture": "allow_citation_reference_block_support_claim",
+      "recommended_next_action": "review_support",
+      "friction_level": "medium",
+      "runtime_response": [
+        "allow_citation_presence",
+        "block_support_claim",
+        "require_support_review",
+        "require_claim_to_source_fit_review",
+        "continue_with_limitation"
+      ],
+      "resolution_summary": "Cited evidence records citation presence, but does not yet establish support.",
+      "boundary_note": "Cited evidence does not equal supported evidence."
+    },
+    {
+      "evidence_id": "EV-SUPPORTED-ORAL-HYGIENE-001",
+      "evidence_status": "supported",
+      "handling_posture": "allow_scoped_support_claim",
+      "recommended_next_action": "continue",
+      "friction_level": "low",
+      "runtime_response": [
+        "allow_scoped_support_claim",
+        "block_universalization",
+        "preserve_audit_trail",
+        "continue_with_limitation"
+      ],
+      "resolution_summary": "Supported evidence allows a scoped support claim under the declared domain, phrase, rule set, and review scope.",
+      "boundary_note": "Supported evidence remains scope-bound and does not become universal truth."
+    }
+  ],
+  "aggregate_actions": [
+    "cite_sources",
+    "continue",
+    "review_support"
+  ],
+  "aggregate_runtime_responses": [
+    "allow_semantic_validation",
+    "block_support_claim",
+    "surface_evidence_gap",
+    "require_source_collection",
+    "continue_with_limitation",
+    "allow_citation_presence",
+    "require_support_review",
+    "require_claim_to_source_fit_review",
+    "allow_scoped_support_claim",
+    "block_universalization",
+    "preserve_audit_trail"
+  ],
+  "overall_resolution": "mixed_posture",
+  "overall_summary": "The evidence bundle resolves to multiple handling postures. Pending evidence requires source collection, cited evidence requires support review, and supported evidence allows only scoped continuation.",
+  "anti_inflation_note": "This report does not prove the oral hygiene claim externally. It records how the evidence bundle resolves into bounded handling postures.",
+  "boundary_note": "The report preserves status plurality. Supported evidence does not erase pending or cited limitations."
+}

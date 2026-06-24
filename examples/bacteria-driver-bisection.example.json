@@ -1,0 +1,40 @@
+{
+  "driver": "bacteria",
+  "source_phrase": "Brush your teeth twice a day",
+  "domain": "oral hygiene",
+  "interrogatives": {
+    "who": "Human hosts, oral microbiota, caregivers, dental professionals, and institutions that transmit hygiene norms.",
+    "what": "Bacteria are living microorganisms that can inhabit the mouth and contribute to plaque and decay under certain conditions.",
+    "when": "They matter when conditions allow growth, accumulation, acid production, or harmful interaction with teeth and gums.",
+    "where": "They exist in the oral cavity, especially on tooth surfaces, gums, tongue, and biofilm-forming areas.",
+    "how": "They reproduce, form biofilms, metabolize available nutrients, and can create byproducts that affect enamel, gums, odor, and disease risk.",
+    "why": "They create governance pressure because individual daily behavior can reduce harmful accumulation before damage becomes costly or painful.",
+    "why_not": "They may become less relevant if other controls prevent harmful accumulation, if the host lacks teeth, or if the biological conditions for harm are absent. These exceptions require evidence."
+  },
+  "prerequisite_truths": [
+    {
+      "claim": "Bacteria can exist in the human mouth.",
+      "status": "evidenced",
+      "notes": "Common biological premise; source citation to be added in evidence pass."
+    },
+    {
+      "claim": "Some oral bacteria can contribute to plaque, acid production, decay, gum disease, or odor.",
+      "status": "evidenced",
+      "notes": "Requires dental/public-health sources in evidence pass."
+    },
+    {
+      "claim": "Daily tooth brushing can reduce harmful accumulation.",
+      "status": "evidenced",
+      "notes": "Requires dental/public-health sources in evidence pass."
+    }
+  ],
+  "evidence_notes": [
+    "Evidence citations are intentionally deferred until the first evidence pass."
+  ],
+  "ambiguity_zones": [
+    "Twice daily may be a practical public-health compression rather than a universal biological constant.",
+    "Different populations, diets, dental conditions, and tools may alter the optimal behavior."
+  ],
+  "evidence_status": "established",
+  "exploration_value": "medium"
+}

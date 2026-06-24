@@ -1,0 +1,22 @@
+{
+  "evidence_id": "EV-CITED-ORAL-HYGIENE-001",
+  "evidence_status": "cited",
+  "claim_ref": "pressure-layer-taxonomy.example.json::driver",
+  "claim_text": "Bacteria is the driver in the oral hygiene decomposition for the phrase 'Brush your teeth twice a day.'",
+  "evidence_summary": "A source placeholder has been attached for the oral hygiene driver claim. This example records citation presence only. It does not claim that the source has been reviewed for sufficiency, quality, freshness, or claim-to-source fit.",
+  "evidence_source": "SOURCE_PLACEHOLDER_ORAL_HYGIENE_BACTERIA_DRIVER",
+  "source_type": "public_health_source",
+  "evidence_scope": "oral hygiene domain; current source phrase; current pressure-layer semantic rule set",
+  "evidence_family": "not_assigned",
+  "evidence_role": "support",
+  "supports_claim": "not yet determined",
+  "limits_claim": "Citation exists, but support has not yet been established. The citation must not be treated as proof that bacteria is universally a driver outside this decomposition.",
+  "weakness_note": "The cited source has not yet been reviewed for relevance, sufficiency, specificity, or authority.",
+  "conflict_note": "No counterevidence or conflicting source review has been completed.",
+  "freshness_note": "Citation freshness has not yet been checked.",
+  "boundary_note": "Cited evidence means a source has been attached. It does not mean the claim is supported.",
+  "issued_at": "2026-06-23",
+  "expires_at": "",
+  "reviewed_at": "",
+  "reviewer_note": "Initial cited evidence reference example. This intentionally preserves the boundary cited does not equal supported."
+}

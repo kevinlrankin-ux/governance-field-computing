@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence Boundary Principles Registry",
+  "type": "object",
+  "required": [
+    "registry_id",
+    "version",
+    "status",
+    "principles",
+    "anti_inflation_note",
+    "boundary_note"
+  ],
+  "properties": {
+    "registry_id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "deprecated",
+        "superseded"
+      ]
+    },
+    "principles": {
+      "type": "array",
+      "minItems": 15,
+      "items": {
+        "type": "object",
+        "required": [
+          "principle_id",
+          "principle_number",
+          "name",
+          "statement",
+          "boundary_rule",
+          "anti_collapse_rule",
+          "applies_to",
+          "methodology_ref",
+          "decision_ref"
+        ],
+        "properties": {
+          "principle_id": {
+            "type": "string"
+          },
+          "principle_number": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "name": {
+            "type": "string"
+          },
+          "statement": {
+            "type": "string"
+          },
+          "boundary_rule": {
+            "type": "string"
+          },
+          "anti_collapse_rule": {
+            "type": "string"
+          },
+          "applies_to": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "semantic_validation",
+                "citation_presence",
+                "evidence_support",
+                "scope_bound_warrant",
+                "evidence_status",
+                "evidence_quality",
+                "runtime_posture",
+                "institutional_authority",
+                "domain_expansion",
+                "generated_artifacts",
+                "vendor_inputs",
+                "local_pipeline",
+                "placeholder_sources",
+                "review_pathways",
+                "uncertainty_visibility"
+              ]
+            }
+          },
+          "methodology_ref": {
+            "type": "string"
+          },
+          "decision_ref": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "required_principle_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "anti_inflation_note": {
+      "type": "string"
+    },
+    "boundary_note": {
+      "type": "string"
+    },
+    "vendor_boundary_note": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
